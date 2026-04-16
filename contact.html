@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - CineWorld</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(28, 28, 28, 0.95) 0%, rgba(30, 30, 30, 0.9) 100%);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(229, 189, 9, 0.2);
+      padding: 20px 40px;
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #e5bd09;
+      box-shadow: 0 8px 32px rgba(229, 189, 9, 0.1);
+      letter-spacing: 2px;
+      text-shadow: 0 0 20px rgba(229, 189, 9, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    header a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 25px;
+      background: rgba(0, 191, 255, 0.1);
+      border: 1px solid rgba(0, 191, 255, 0.3);
+    }
+
+    header a:hover {
+      background: rgba(0, 191, 255, 0.2);
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    main {
+      width: 100%;
+      padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    /* Contact Box Styling (Reusing styles from about.html) */
+    .contact-box {
+      background: rgba(30, 30, 30, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(229, 189, 9, 0.2);
+      border-radius: 15px;
+      padding: 40px;
+      margin: 0 40px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      animation: slideDown 0.6s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-box h1 {
+      color: #e5bd09;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      border-bottom: 2px solid rgba(229, 189, 9, 0.3);
+      padding-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .contact-box h2 {
+      color: #ffcc00;
+      font-size: 1.5em;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    
+    .contact-info p {
+      font-size: 1.05em;
+      color: #ccc;
+      margin: 15px 0;
+      line-height: 1.7;
+    }
+
+    .contact-info strong {
+        color: #e5bd09;
+    }
+    
+    .contact-info a {
+        color: #00bfff;
+        text-decoration: none;
+    }
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    CineWorld
+    <div style="position: absolute; top: 20px; right: 40px; display: flex; gap: 15px;">
+      <a href="/">Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="contact-box">
+      <h1>Get In Touch With The Creators</h1>
+      
+      <p>We're excited to share CineWorld with you. If you have any feedback, suggestions, or collaboration inquiries, feel free to reach out directly to the creators.</p>
+      
+      <div class="contact-info">
+        <h2>Created By</h2>
+        <p><strong>Tanush</strong> and <strong>Tanish</strong></p>
+
+        <h2>Contact Details</h2>
+        <p><strong>Email:</strong> <a href="mailto:tanushbabu10d@gmail.com">tanushbabu10d@gmail.com</a></p>
+        <p><strong>Email:</strong> <a href="mailto:tanishagnihotri14@gmail.com">tanishagnihotri14@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91 9646828899</p>
+        <p><strong>Phone:</strong> +91 79868 08960</p>
+      </div>
+
+      <p style="margin-top: 30px; font-style: italic;">Thank you for exploring CineWorld!</p>
+    </div>
+  </main>
+
+</body>
+</html>

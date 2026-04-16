@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Contact - CineWorld</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+      color: #fff;
+    }
+    
+    header {
+      background: linear-gradient(135deg, rgba(28, 28, 28, 0.95) 0%, rgba(30, 30, 30, 0.9) 100%);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(229, 189, 9, 0.2);
+      padding: 20px 40px;
+      font-size: 2.5em;
+      font-weight: 700;
+      color: #e5bd09;
+      box-shadow: 0 8px 32px rgba(229, 189, 9, 0.1);
+      letter-spacing: 2px;
+      text-shadow: 0 0 20px rgba(229, 189, 9, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    header a {
+      color: #00bfff;
+      text-decoration: none;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      padding: 8px 16px;
+      border-radius: 25px;
+      background: rgba(0, 191, 255, 0.1);
+      border: 1px solid rgba(0, 191, 255, 0.3);
+    }
+
+    header a:hover {
+      background: rgba(0, 191, 255, 0.2);
+      box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+      transform: translateY(-2px);
+    }
+
+    main {
+      width: 100%;
+      padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-container {
+      background: rgba(30, 30, 30, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(229, 189, 9, 0.2);
+      border-radius: 15px;
+      padding: 40px;
+      margin: 0 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      animation: slideDown 0.6s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-container h1 {
+      color: #e5bd09;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      border-bottom: 2px solid rgba(229, 189, 9, 0.3);
+      padding-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .section-container h2 {
+      color: #ffcc00;
+      font-size: 1.5em;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .section-container p {
+      color: #ccc;
+      font-size: 1.05em;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+
+    .section-container ul {
+      list-style: disc;
+      margin: 15px 0 20px 25px;
+      color: #ccc;
+    }
+
+    .section-container li {
+      margin-bottom: 12px;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 25px;
+    }
+
+    .info-card {
+      background: rgba(42, 42, 42, 0.6);
+      border: 1px solid rgba(0, 191, 255, 0.2);
+      border-radius: 12px;
+      padding: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      border-color: #00bfff;
+      box-shadow: 0 8px 25px rgba(0, 191, 255, 0.2);
+      background: rgba(42, 42, 42, 0.8);
+    }
+
+    .info-card h3 {
+      color: #00bfff;
+      font-size: 1.2em;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .info-card p {
+      color: #bbb;
+      font-size: 0.95em;
+      margin: 8px 0;
+    }
+
+    .contact-info a {
+      color: #00bfff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #00ffff;
+      text-decoration: underline;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+
+    .contact-info strong {
+      color: #e5bd09;
+      font-weight: 700;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #e5bd09 0%, #ffcc00 100%);
+      color: #1c1c1c;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(229, 189, 9, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(229, 189, 9, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.8em;
+        padding: 15px 20px;
+      }
+
+      header a {
+        margin: 5px;
+        font-size: 0.9em;
+      }
+
+      .section-container {
+        margin: 15px 20px;
+        padding: 25px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .section-container h1 {
+        font-size: 1.8em;
+      }
+
+      .section-container h2 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    CineWorld
+    <div style="position: absolute; top: 20px; right: 40px; display: flex; gap: 15px;">
+      <a href="/">Back to Home</a>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- ABOUT SECTION -->
+    <div class="section-container">
+      <h1>🎬 About CineWorld</h1>
+      <p>CineWorld is more than just a movie list—it's a <strong>smart movie recommendation engine</strong> built specifically for the dedicated <strong>cinephile</strong>. We understand the struggle of finding a truly great film in an overwhelming sea of content. Our platform utilizes the power of the <strong>TMDB (The Movie Database) API</strong> and advanced filtering to provide tailored recommendations that satisfy the most discerning film lover.</p>
+
+      <h2>Why Cinephiles Need CineWorld</h2>
+      <ul>
+        <li><strong>Precision Discovery:</strong> Forget simple "trending" lists. Our Advanced Filtering and Sorting (by rating, release date, and genre combinations) lets you precisely define the kind of film you want to watch right now.</li>
+        <li><strong>Deep Context:</strong> Every film card is a gateway to knowledge. Access rich details including full cast and crew, director information, runtimes, and embedded trailers in our detailed movie modals.</li>
+        <li><strong>A Curation Tool:</strong> Designed by film lovers, CineWorld serves as a powerful tool to catalog and discover critically acclaimed and historically important films.</li>
+      </ul>
+
+      <h2>Features</h2>
+      <ul>
+        <li>🔍 Advanced search and filtering by genre</li>
+        <li>⭐ Sort movies by rating, popularity, and release date</li>
+        <li>📽️ Detailed movie information and trailers</li>
+        <li>🎨 Modern glassmorphism design</li>
+        <li>📱 Fully responsive on all devices</li>
+      </ul>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="section-container contact-info">
+      <h1>📞 Get In Touch</h1>
+      <p>We're excited to share CineWorld with you. If you have any feedback, suggestions, or collaboration inquiries, feel free to reach out directly to the creators.</p>
+
+      <h2>Created By</h2>
+      <p style="font-size: 1.15em; color: #ffcc00;"><strong>Tanush</strong> and <strong>Tanish</strong></p>
+
+      <h2>Contact Details</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>📧 Email - Tanush</h3>
+          <p><a href="mailto:tanushbabu10d@gmail.com">tanushbabu10d@gmail.com</a></p>
+          <h3>📱 Phone - Tanush</h3>
+          <p><a href="tel:+919646828899">+91 9646828899</a></p>
+        </div>
+        <div class="info-card">
+          <h3>📧 Email - Tanish</h3>
+          <p><a href="mailto:tanishagnihotri14@gmail.com">tanishagnihotri14@gmail.com</a></p>
+          <h3>📱 Phone - Tanish</h3>
+          <p><a href="tel:+917986808960">+91 79868 08960</a></p>
+        </div>
+      </div>
+
+      <p style="margin-top: 30px; font-style: italic; text-align: center; color: #00bfff;">
+        Thank you for exploring CineWorld! We'd love to hear from you.
+      </p>
+    </div>
+
+  </main>
+
+</body>
+</html>
